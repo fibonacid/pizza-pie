@@ -3,7 +3,9 @@ const { text } = Astro.props;
 const words = text.split(" ");
 ---
 
-<h1 class="text-4xl text-center py-8 flex gap-2 flex-wrap justify-evenly mx-4">
+<h1
+  class="text-4xl text-center pt-10 py-8 flex gap-2 flex-wrap justify-center mx-4"
+>
   {
     words.map((word: string) => (
       <span
