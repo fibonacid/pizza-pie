@@ -1,0 +1,18 @@
+---
+const { children } = Astro.props;
+---
+
+<h1 class="text-4xl text-center py-8 flex gap-2 flex-wrap justify-evenly mx-4">
+  {
+    (children as any).split(" ").map((word: string) => (
+      <span
+        class="bg-slate-900 text-white px-1"
+        style={{
+          transform: "rotate(" + Math.random() * 10 + "deg)",
+        }}
+      >
+        {word}
+      </span>
+    ))
+  }
+</h1>
