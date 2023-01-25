@@ -1,4 +1,5 @@
 ---
+import Title from "../components/Title.astro";
 import Layout from "../layouts/Layout.astro";
 
 const GAP = "GAP";
@@ -6,24 +7,7 @@ const GAP = "GAP";
 
 <Layout title="Welcome to Astro.">
   <main class="py-4 max-w-5xl mx-4 lg:m-auto">
-    <h1
-      class="text-4xl text-center py-8 flex gap-2 flex-wrap justify-evenly mx-4"
-    >
-      {
-        "The Easiest Way to make a Pizza is to add an Apple Pie"
-          .split(" ")
-          .map((word) => (
-            <span
-              class="bg-slate-900 text-white px-1"
-              style={{
-                transform: "rotate(" + Math.random() * 10 + "deg)",
-              }}
-            >
-              {word}
-            </span>
-          ))
-      }
-    </h1>
+    <Title text="The Easiest Way to make a Pizza is to add an Apple Pie" />
     <div class="h-10"></div>
     <p class="text-center flex flex-col justify-center items-center">
       Buongiorno cercatori d’oro benvenuti in questo nuovo video<br />
