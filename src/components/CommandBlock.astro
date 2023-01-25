@@ -1,13 +1,21 @@
 ---
 export type Props = {
   cmd: string;
+  caption?: string;
 };
 
-const { cmd } = Astro.props as Props;
+const { cmd, caption } = Astro.props as Props;
 ---
 
-<p
-  class="font-mono max-w-prose mx-auto py-[1em] text-center bg-blue-100 text-purple-800"
->
-  {"<" + cmd + ">"}
-</p>
+<figure>
+  <div
+    role="img"
+    aria-label={cmd}
+    class="font-mono max-w-prose mx-auto py-[1em] text-center bg-blue-100 text-purple-800"
+  >
+    {"<" + cmd + ">"}
+  </div>
+  <figcaption class="sr-only">
+    {caption || "A computer command"}
+  </figcaption>
+</figure>
