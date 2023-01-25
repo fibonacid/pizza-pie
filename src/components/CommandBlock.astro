@@ -1,0 +1,9 @@
+---
+export type Props = {
+  cmd: string;
+};
+
+const { cmd } = Astro.props as Props;
+---
+
+<p class="font-mono text-gray-500">{"<" + cmd + ">"}</p>

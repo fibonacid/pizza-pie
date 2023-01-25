@@ -1,9 +1,8 @@
 ---
 import CaptionBlock from "../components/CaptionBlock.astro";
+import CommandBlock from "../components/CommandBlock.astro";
 import Title from "../components/Title.astro";
 import Layout from "../layouts/Layout.astro";
-
-const GAP = "GAP";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -18,7 +17,7 @@ const GAP = "GAP";
       no…)<br />e la realtà dei fatti è che sta piovendo [...]
     </CaptionBlock>
     <div class="h-10"></div>
-    <p class="font-mono text-gray-500">{"<skip 30s>"}</p>
+    <CommandBlock cmd="skip 30s" />
     <div class="h-10"></div>
     <CaptionBlock>
       [...] abbigliamento impermeabile lui è australiano l’acqua gli scivola
