@@ -6,4 +6,8 @@ export type Props = {
 const { cmd } = Astro.props as Props;
 ---
 
-<p class="font-mono text-gray-500">{"<" + cmd + ">"}</p>
+<p
+  class="font-mono max-w-prose mx-auto py-[1em] text-center bg-blue-100 text-purple-800"
+>
+  {"<" + cmd + ">"}
+</p>
