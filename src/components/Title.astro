@@ -1,17 +1,25 @@
 ---
-const { text } = Astro.props;
+export type Props = {
+  text: string;
+  underline?: boolean;
+  rotate?: boolean;
+  class?: string;
+};
+
+const { text, underline, rotate, class: className } = Astro.props as Props;
 const words = text.split(" ");
 ---
 
 <h1
-  class="text-4xl text-center pt-10 py-8 flex gap-2 flex-wrap justify-center mx-4"
+  class={"text-4xl text-center pt-10 py-8 flex gap-2 flex-wrap justify-center mx-4 " +
+    className}
 >
   {
-    words.map((word: string) => (
+    words.map((word: string, i: number) => (
       <span
-        class="bg-slate-900 text-white px-1"
+        class={underline ? "underline" : "bg-slate-900 text-white px-1"}
         style={{
-          transform: "rotate(" + Math.random() * 10 + "deg)",
+          transform: rotate ? "rotate(" + Math.random() * 10 + "deg)" : "",
         }}
       >
         {word}

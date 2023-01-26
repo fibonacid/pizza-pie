@@ -3,13 +3,25 @@ import CaptionBlock from "../components/CaptionBlock.astro";
 import CommandBlock from "../components/CommandBlock.astro";
 import Title from "../components/Title.astro";
 import Layout from "../layouts/Layout.astro";
+
+export const IMG = [
+  "/DALL·E 2023-01-26 00.52.59 - The Easiest Way to make a Pizza is to add an Apple Pie.png",
+  "/DALL·E 2023-01-26 00.53.56 - Pizza and an Apple Pie in a boxing fight.png",
+  "/DALL·E 2023-01-26 00.55.06 - A slice of pizza and an apple pie on a table.png",
+];
 ---
 
 <Layout title="Welcome to Astro.">
   <main
-    class="pb-4 max-w-prose flex flex-col gap-10 m-4 lg:m-auto bg-slate-100 px-10 shadow-xl"
+    class="pb-4 max-w-prose flex flex-col py-10 gap-10 m-4 lg:m-auto bg-slate-100 px-10 shadow-xl"
   >
-    <Title text="The Easiest Way to make a Pizza is to add an Apple Pie" />
+    <div class="relative">
+      <Title
+        class="absolute bottom-0"
+        text="The Easiest Way to make a Pizza is to add an Apple Pie"
+      />
+      <img src={IMG[2]} />
+    </div>
     <CaptionBlock>
       Buongiorno cercatori d’oro, benvenuti in questo nuovo video<br />Oggi
       siamo alla ricerca dell’oro lungo questo fiume che abbiamo soprannominato
@@ -17,11 +29,8 @@ import Layout from "../layouts/Layout.astro";
       raccomando di stalkerarlo anche su youtube (…no no no…)<br /> la realtà dei
       fatti è che sta piovendo
     </CaptionBlock>
-    <CommandBlock cmd="skip 30s" />
-    <CaptionBlock>
-      [...] abbigliamento impermeabile lui è australiano l’acqua gli scivola
-      addosso [...]
-    </CaptionBlock>
+    <CommandBlock cmd="skip 30s" />class [...] abbigliamento impermeabile lui è
+    australiano l’acqua gli scivola addosso [...]
     <CommandBlock cmd="skip 30s" />
     <CaptionBlock>
       [...] questo video sarà un po’ breve ma intenso voglio farvi notare alcune
@@ -30,7 +39,7 @@ import Layout from "../layouts/Layout.astro";
     </CaptionBlock>
     <CommandBlock cmd="pause" />
     <p>
-      Cliccando la barra spaziatrice, Fibonachos sente un dolore al polso.
+      Cliccando la barra spaziatrice, Fibonachos sente un dolore al polso.<br />
       Aprendo e chiudendo i palmi scopre un dolore diffuso su entrambe le mani
     </p>
   </main>
